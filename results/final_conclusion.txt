@@ -1,0 +1,5 @@
+The TP53 nucleotide sequence was successfully analysed using NCBI BLASTn and related bioinformatics tools.
+
+The sequence demonstrated strong similarity with Homo sapiens TP53 sequences, showing 100% identity and strong conservation.
+
+MSA and phylogenetic analysis confirmed evolutionary conservation and functional importance of TP53 as a tumor suppressor gene.
