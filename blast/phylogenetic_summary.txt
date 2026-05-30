@@ -1,0 +1,3 @@
+All selected TP53 sequences clustered closely together.
+
+Homo sapiens TP53 sequences formed closely related branches with small evolutionary distance, indicating strong conservation and genetic similarity.
