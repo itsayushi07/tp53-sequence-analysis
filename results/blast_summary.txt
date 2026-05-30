@@ -1,0 +1,9 @@
+Top Hit Accession: AM076970.1
+
+Maximum Score: 486 bits
+Query Coverage: 95%
+Percent Identity: 100%
+E-value: 8e-133
+
+Conclusion:
+Query sequence strongly matches Homo sapiens TP53 gene family.
