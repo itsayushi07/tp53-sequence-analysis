@@ -1,0 +1,8 @@
+Query length: 310 bp
+Identities: 263/263 (100%)
+Gaps: 0
+E-value: 8e-133
+Coverage: 95%
+
+Interpretation:
+The query sequence demonstrated complete identity with Homo sapiens TP53 sequences and showed strong conservation without gaps.
