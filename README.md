@@ -186,14 +186,11 @@ The phylogenetic analysis suggested that **TP53 is evolutionarily conserved**, r
 tp53-sequence-analysis/
 │── README.md
 │── LICENSE
-│── .gitignore
 │
 ├── data/
 ├── blast/
 ├── msa/
-├── figures/
 ├── results/
-└── docs/
 ```
 
 ---
@@ -222,6 +219,7 @@ This repository demonstrates the application of **bioinformatics workflows for n
 ## Author
 
 **Ayushi**
+
 Bioinformatics • Computational Biology • Genomics
 
 <div align="center">
