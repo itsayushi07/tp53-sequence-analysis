@@ -4,7 +4,6 @@
 
 ### Bioinformatics Workflow for TP53 Nucleotide Sequence Characterization and Evolutionary Interpretation
 
-<img src="./blast/blast_results_summary.png" width="100%">
 
 <br>
 
