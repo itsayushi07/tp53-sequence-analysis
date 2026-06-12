@@ -1,228 +1,392 @@
-# tp53-sequence-analysis
-
 <div align="center">
 
-# TP53 Sequence Analysis Pipeline
+# 🧬 TP53 Sequence Analysis Pipeline
 
-### Bioinformatics Workflow for TP53 Nucleotide Sequence Characterization
+### Bioinformatics Workflow for TP53 Nucleotide Sequence Characterization and Evolutionary Interpretation
 
-Comprehensive sequence analysis integrating **NCBI BLASTn**, **pairwise alignment**, **multiple sequence alignment (MSA)**, and **phylogenetic characterization** of the **TP53 tumor suppressor gene**.
+<img src="./blast/blast_results_summary.png" width="100%">
 
-![Field](https://img.shields.io/badge/Field-Bioinformatics-black)
-![Analysis](https://img.shields.io/badge/Analysis-Sequence%20Analysis-black)
-![Gene](https://img.shields.io/badge/Gene-TP53-black)
-![Status](https://img.shields.io/badge/Status-Completed-success)
+<br>
+
+![Bioinformatics](https://img.shields.io/badge/Bioinformatics-Sequence_Analysis-blueviolet?style=for-the-badge)
+![Genomics](https://img.shields.io/badge/Genomics-TP53-success?style=for-the-badge)
+![BLASTn](https://img.shields.io/badge/NCBI-BLASTn-orange?style=for-the-badge)
+![MSA](https://img.shields.io/badge/Multiple_Sequence_Alignment-MSA-purple?style=for-the-badge)
+![Phylogenetics](https://img.shields.io/badge/Evolutionary_Analysis-Phylogenetics-red?style=for-the-badge)
+
+<br>
+
+### Bioinformatics × Genomics × Sequence Analysis
 
 </div>
 
 ---
 
-## Overview
+# 🌟 Project Snapshot
 
-This repository presents a **bioinformatics workflow for TP53 nucleotide sequence analysis** using **NCBI BLASTn** and related computational tools for sequence identification, similarity assessment, evolutionary interpretation, and conservation analysis.
+<div align="center">
 
-The study integrates **sequence similarity searching**, **pairwise alignment**, **multiple sequence alignment (MSA)**, and **phylogenetic analysis** to evaluate conservation and biological significance of the **TP53 tumor suppressor gene**.
+| 🧬 Gene | 🎯 Identity | 📊 E-value | 🌍 Species |
+|----------|----------|----------|----------|
+| TP53 | 100% | 8e-133 | Homo sapiens |
 
-The project demonstrates practical applications of computational biology tools for molecular sequence characterization and genomic interpretation.
-
----
-
-# Research Objective
-
-To analyse the **TP53 nucleotide sequence** using **NCBI BLASTn** and associated bioinformatics tools for:
-
-* Sequence identification
-* Similarity assessment
-* Pairwise sequence alignment
-* Multiple sequence alignment (MSA)
-* Phylogenetic characterization
+</div>
 
 ---
 
-# Sequence Information
+# 🌍 Overview
 
-| Parameter                    | Value           |
-| ---------------------------- | --------------- |
-| **Gene**                     | TP53            |
-| **Sequence Type**            | Nucleotide      |
-| **Database Used**            | NCBI            |
-| **BLAST Tool**               | BLASTn          |
-| **MSA Tool**                 | NCBI MSA Viewer |
-| **Top Hit Accession Number** | `AM076970.1`    |
-| **Species**                  | *Homo sapiens*  |
+This repository presents a comprehensive bioinformatics workflow for the characterization and evolutionary analysis of the **TP53 tumor suppressor gene** using widely adopted computational biology tools.
+
+The project integrates:
+
+- 🔍 Sequence Similarity Searching
+- 🧬 Pairwise Alignment
+- 📊 Multiple Sequence Alignment (MSA)
+- 🌳 Phylogenetic Analysis
+- 🧠 Evolutionary Interpretation
+
+to investigate sequence conservation, biological significance, and evolutionary relationships associated with TP53.
+
+The workflow demonstrates practical applications of computational biology techniques for molecular sequence characterization and genomic interpretation.
 
 ---
 
-# Workflow
+# 🎯 Research Objective
 
-## 1. Sequence Retrieval
+To analyze the TP53 nucleotide sequence using NCBI BLASTn and associated bioinformatics tools for:
 
-The TP53 nucleotide sequence was retrieved and formatted in **FASTA format** for downstream bioinformatics analysis.
+✅ Sequence identification
+
+✅ Similarity assessment
+
+✅ Pairwise sequence alignment
+
+✅ Multiple sequence alignment
+
+✅ Phylogenetic characterization
+
+✅ Evolutionary interpretation
+
+---
+
+# 🧬 Sequence Information
+
+| Parameter | Value |
+|-----------|-----------|
+| Gene | TP53 |
+| Sequence Type | Nucleotide |
+| Database | NCBI |
+| Similarity Search Tool | BLASTn |
+| MSA Tool | NCBI MSA Viewer |
+| Top Hit Accession | AM076970.1 |
+| Species | Homo sapiens |
+
+---
+
+# ⚙️ Bioinformatics Workflow
+
+```mermaid
+flowchart LR
+
+A[TP53 Query Sequence]
+--> B[NCBI BLASTn]
+
+B --> C[Similarity Search]
+
+C --> D[Pairwise Alignment]
+
+D --> E[Multiple Sequence Alignment]
+
+E --> F[Phylogenetic Analysis]
+
+F --> G[Evolutionary Interpretation]
+```
+
+---
+
+# 📥 Sequence Retrieval
+
+The TP53 nucleotide sequence was retrieved in FASTA format and used as the query sequence for downstream bioinformatics analyses.
 
 ### Query Sequence
 
 ```text
 >Query_TP53_sequence
+
 ATGGAGGAGCCGCAGTCAGATCCTAGCGTCGAGCCCCCTCTGAGTCAGGAAACATTTTCAGACCTATGGAAACTACTTCCTGAAAACAACGTTCTGTCCCCCTTGCCGTCCCAAGCAATG
 ```
 
-The retrieved sequence served as the query for similarity searching using **NCBI BLASTn**.
+### Input FASTA File
 
-<p align="center">
-  <img src="figures/tp53_sequence.png" width="700">
-</p>
-
----
-
-## 2. BLASTn Sequence Similarity Analysis
-
-Sequence similarity analysis was performed using **NCBI BLASTn** against nucleotide databases to identify homologous TP53-related sequences.
-
-### BLAST Summary
-
-| Metric           | Result       |
-| ---------------- | ------------ |
-| Maximum Score    | `486 bits`   |
-| Query Coverage   | `95%`        |
-| Percent Identity | `100%`       |
-| E-value          | `8e-133`     |
-| Top Hit          | `AM076970.1` |
-
-### Key Findings
-
-The query sequence demonstrated **highly significant similarity** with multiple **Homo sapiens TP53 sequences**, including:
-
-* TP53 mutant forms
-* TP53 beta isoforms
-* Tumor suppressor TP53 mRNA sequences
-
-The extremely low **E-value** and **100% identity** confirmed that the query sequence belongs to the **TP53 gene family**.
-
-<p align="center">
-  <img src="figures/blast_results.png" width="700">
-</p>
-
----
-
-## 3. Pairwise Alignment Analysis
-
-Pairwise alignment was performed to compare the query sequence against the highest-scoring TP53 sequence.
-
-### Alignment Statistics
-
-| Parameter         | Result           |
-| ----------------- | ---------------- |
-| Identities        | `263/263 (100%)` |
-| Gaps              | `0`              |
-| Alignment Quality | Excellent        |
-
-### Interpretation
-
-The alignment demonstrated **complete sequence identity without gaps**, indicating strong conservation and close similarity to known **Homo sapiens TP53 sequences**.
-
-The absence of mismatches and gaps suggests that the analysed region is **highly conserved and biologically important**.
-
-<p align="center">
-  <img src="figures/pairwise_alignment.png" width="700">
-</p>
-
----
-
-## 4. Multiple Sequence Alignment (MSA)
-
-Multiple sequence alignment was performed using the **NCBI MSA Viewer** to compare multiple TP53-related sequences simultaneously.
-
-### Major Observations
-
-* Strong sequence conservation across aligned regions
-* Very limited sequence variation
-* Conserved regions indicate functional importance
-* Shared structural and evolutionary similarity observed
-
-### Interpretation
-
-The MSA analysis demonstrated that **TP53 is highly conserved among Homo sapiens sequences**, supporting its critical biological role in **tumor suppression and genomic stability**.
-
-<p align="center">
-  <img src="figures/msa_viewer.png" width="700">
-</p>
-
----
-
-## 5. Phylogenetic Analysis
-
-Phylogenetic analysis was performed using the **distance tree generated from BLAST results** to evaluate evolutionary relationships.
-
-### Key Findings
-
-* TP53 sequences clustered closely together
-* *Homo sapiens* TP53 sequences formed related branches
-* Minimal evolutionary distance observed
-* Strong genetic similarity confirmed
-
-### Interpretation
-
-The phylogenetic analysis suggested that **TP53 is evolutionarily conserved**, reflecting its essential role in **cell-cycle regulation and tumor suppression**.
-
-<p align="center">
-  <img src="figures/phylogenetic_tree.png" width="700">
-</p>
-
----
-
-# Key Findings
-
-* The TP53 query sequence showed **100% identity** with known *Homo sapiens* TP53 sequences.
-* **BLASTn analysis** confirmed highly significant sequence similarity (**E-value = 8e−133**).
-* Pairwise alignment demonstrated **perfect conservation with no gaps**.
-* **MSA analysis** confirmed highly conserved functional regions.
-* Phylogenetic analysis demonstrated **close evolutionary relationships** among TP53 sequences.
-
----
-
-# Repository Structure
-
-```bash
-tp53-sequence-analysis/
-│── README.md
-│── LICENSE
-│
-├── data/
-├── blast/
-├── msa/
-├── results/
+```text
+data/tp53_query_sequence.fasta
 ```
 
 ---
 
-# Tools & Technologies
+# 🔍 BLASTn Sequence Similarity Analysis
 
-| Category                    | Tool                |
-| --------------------------- | ------------------- |
-| Database                    | NCBI                |
-| Similarity Search           | BLASTn              |
-| Multiple Sequence Alignment | NCBI MSA Viewer     |
-| Phylogenetic Analysis       | BLAST Distance Tree |
+Sequence similarity analysis was performed using NCBI BLASTn against nucleotide databases to identify homologous TP53-related sequences.
 
----
+<div align="center">
 
-## Scientific Relevance
+<img src="./blast/blast_results_summary.png" width="950">
 
-**TP53** is one of the most important **tumor suppressor genes** involved in **DNA repair, apoptosis, genomic stability, and cell-cycle regulation**.
-
-Mutations in TP53 are strongly associated with multiple cancers, making it one of the most extensively studied genes in molecular biology and cancer genomics.
-
-This repository demonstrates the application of **bioinformatics workflows for nucleotide sequence analysis, comparative genomics, and evolutionary interpretation**.
+</div>
 
 ---
 
-## Author
+## BLAST Summary
 
-**Ayushi**
+| Metric | Result |
+|-----------|-----------|
+| Maximum Score | 486 bits |
+| Query Coverage | 95% |
+| Percent Identity | 100% |
+| E-value | 8e-133 |
+| Top Hit | AM076970.1 |
+
+---
+
+## Key Findings
+
+The query sequence demonstrated highly significant similarity with multiple Homo sapiens TP53 sequences including:
+
+- TP53 mutant variants
+- TP53 beta isoforms
+- TP53 mRNA sequences
+- Tumor suppressor gene transcripts
+
+### Interpretation
+
+The extremely low E-value and perfect sequence identity strongly confirmed that the query belongs to the TP53 gene family.
+
+---
+
+# 🧬 Pairwise Alignment Analysis
+
+Pairwise alignment was performed between the query sequence and the highest-scoring BLAST hit.
+
+<div align="center">
+
+<img src="./blast/pairwise_alignment.png" width="950">
+
+</div>
+
+---
+
+## Alignment Statistics
+
+| Parameter | Result |
+|-----------|-----------|
+| Identities | 263/263 (100%) |
+| Gaps | 0 |
+| Alignment Quality | Excellent |
+| Conservation | Complete |
+
+---
+
+### Interpretation
+
+The alignment demonstrated complete sequence identity without gaps or mismatches.
+
+The absence of insertions, deletions, and substitutions suggests that the analyzed region is highly conserved and likely associated with critical biological functionality.
+
+### Supporting File
+
+```text
+blast/pairwise_alignment_result.txt
+```
+
+---
+
+# 📊 Multiple Sequence Alignment (MSA)
+
+Multiple sequence alignment was performed using the NCBI MSA Viewer to compare multiple TP53-related sequences simultaneously.
+
+<div align="center">
+
+<img src="./msa/msa_alignment.png" width="950">
+
+</div>
+
+---
+
+## Major Observations
+
+✅ Strong sequence conservation
+
+✅ Limited sequence variation
+
+✅ Conserved functional regions
+
+✅ Evolutionary stability
+
+✅ Shared biological functionality
+
+---
+
+### Interpretation
+
+The MSA analysis demonstrated that TP53 remains highly conserved across aligned sequences, reflecting its essential role in:
+
+- Tumor suppression
+- Cell-cycle regulation
+- DNA damage response
+- Genomic stability maintenance
+
+### Supporting File
+
+```text
+msa/msa_results.txt
+```
+
+---
+
+# 🌳 Phylogenetic Analysis
+
+Evolutionary relationships were inferred using the distance tree generated from BLAST results.
+
+---
+
+## Evolutionary Findings
+
+- TP53 sequences clustered closely together
+- Homo sapiens TP53 sequences formed related branches
+- Minimal evolutionary distance observed
+- Strong genetic similarity confirmed
+
+---
+
+## Biological Interpretation
+
+The phylogenetic analysis suggested that TP53 remains evolutionarily conserved due to strong selective pressure associated with its critical cellular functions.
+
+This conservation reflects the biological importance of TP53 in maintaining genomic integrity and regulating cellular responses to DNA damage.
+
+### Supporting File
+
+```text
+blast/phylogenetic_summary.txt
+```
+
+---
+
+# 🏆 Major Findings
+
+```diff
++ TP53 query sequence exhibited 100% sequence identity
++ BLASTn confirmed highly significant similarity
++ E-value = 8e-133
++ Pairwise alignment showed complete conservation
++ No gaps or mismatches observed
++ MSA revealed strong sequence conservation
++ Phylogenetic analysis demonstrated close evolutionary relationships
++ TP53 remains highly conserved due to essential biological functions
+```
+
+---
+
+# 🧬 Biological Significance
+
+TP53 is one of the most important tumor suppressor genes in the human genome.
+
+Its protein product plays critical roles in:
+
+- DNA Repair
+- Cell-Cycle Regulation
+- Apoptosis
+- Genome Surveillance
+- Cancer Prevention
+
+Mutations in TP53 are associated with a wide range of human cancers, making it one of the most extensively studied genes in molecular biology and cancer genomics.
+
+---
+
+# 📂 Repository Structure
+
+```text
+tp53-sequence-analysis/
+
+├── README.md
+│
+├── data/
+│   └── tp53_query_sequence.fasta
+│
+├── blast/
+│   ├── blast_results_summary.png
+│   ├── pairwise_alignment.png
+│   ├── pairwise_alignment_result.txt
+│   └── phylogenetic_summary.txt
+│
+├── msa/
+│   ├── msa_alignment.png
+│   └── msa_results.txt
+│
+├── results/
+│   ├── blast_summary.txt
+│   └── final_conclusion.txt
+│
+└── LICENSE
+```
+
+---
+
+# 🛠 Tools & Technologies
+
+| Category | Tool |
+|-----------|-----------|
+| Database | NCBI |
+| Similarity Search | BLASTn |
+| Sequence Alignment | Pairwise Alignment |
+| Multiple Sequence Alignment | NCBI MSA Viewer |
+| Evolutionary Analysis | BLAST Distance Tree |
+| Computational Biology | Sequence Analysis |
+
+---
+
+# 🌟 Scientific Relevance
+
+TP53 is one of the most extensively studied genes in cancer biology and genomics due to its fundamental role in preserving genomic stability.
+
+This project demonstrates the application of bioinformatics workflows for:
+
+- Sequence Identification
+- Comparative Genomics
+- Evolutionary Interpretation
+- Conservation Analysis
+- Molecular Characterization
+
+while highlighting the importance of computational biology approaches in modern genomic research.
+
+---
+
+# 👩‍🔬 Author
+
+## Ayushi
+
+**Final Year B.Sc. Chemistry**
 
 Bioinformatics • Computational Biology • Genomics
 
+### Research Interests
+
+🧬 Bioinformatics
+
+🌍 Genomics
+
+🔬 Computational Biology
+
+🧪 Cancer Biology
+
+🤖 AI in Life Sciences
+
+---
+
 <div align="center">
+
+# ⭐ Star this repository if you found it useful
 
 ### Bioinformatics × Genomics × Sequence Analysis
 
